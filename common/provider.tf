@@ -2,7 +2,11 @@ provider "aws" {
   region = var.region.default
   default_tags {
     tags = merge(
-      var.default_tags)
+      var.default_tags,
+      {
+        backup = true
+      }
+    )
   }
 }
 
