@@ -1,7 +1,7 @@
 # If the running Terraform version doesn't meet these constraints,
 # an error is shown
-terraform {
-  required_version = "0.14.4"
+# terraform {
+#   required_version = "0.14.4"
 
   # Uncomment this and replace it with your configuration to enable
   # the Terraform S3 backend configuration. Remember that the module
@@ -13,4 +13,4 @@ terraform {
   #  key            = "production/terraform.tfstate"
   #  dynamodb_table = "terraform-template-prd-tfstate-lock"
   #}
-}
+# }
