@@ -11,13 +11,15 @@ provider "aws" {
 }
 
 terraform {
+  required_version = "1.1.9"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "~> 4.0"
     }
   }
 }
+
 
 # resource "aws_dynamodb_table" "CNB-terraform_lock" {
 #   name         = "CNB-terraform-locks"
