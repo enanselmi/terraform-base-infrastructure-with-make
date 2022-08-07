@@ -1,47 +1,29 @@
-variable "vpc_cidr" {  
-    type     = any
-    description = "VPC CIDr"
-    default = []
-}
-
 variable "public_subnets" {
-    description = "List of public subnets"
-    type    = any  
-    default = []
-
+  description = "CIDR list for public subnets"
+  type        = list(string)
 }
 
 variable "private_subnets" {
-  description = "List of private subnets"
-  type     = any
-  default = []
-
+  description = "CIDR list for private subnets"
+  type        = list(string)
 }
 
 variable "azs" {
   description = "List of AZs"
-  type     = any
-  default = []
-
+  type        = list(string)
 }
 
-variable "region" {  
-  type     = any
-  description = "Region where to deploy"
-  default = []
+variable "region" {
+  description = "Region to deploy resources"
+  type        = string
 }
 
-variable "default_tags" {
-  description = "List of default tags"
-  type     = any
-  default = {
-      owner          = "eanselmi@edrans.com"
-      Name           = "Test For CNB"
-      environment    = "tst"
-      costCenter     = "SYSENG"
-      tagVersion     = 1
-      role           = "tst"
-      project        = "CNB"
-      expirationDate = "12/12/2022"
-    }
+variable "tags" {
+  description = "Default tags"
+  type        = map(string)
+}
+
+variable "vpc" {
+  description = "VPC variables"
+  type        = map(string)
 }

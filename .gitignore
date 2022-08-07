@@ -6,3 +6,4 @@
 **/environments/prd/terraform.tfstate.backup
 **/terraform.tfstate.backup
 **/.terraform.tfstate.backup
+common/.infracost/

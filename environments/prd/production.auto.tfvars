@@ -1,30 +1,22 @@
-vpc_cidr = {
-  default = "10.200.0.0/16"
-}
-
-public_subnets = {
-  default = ["10.200.0.0/24", "10.200.1.0/24"]
-}
-
-private_subnets = {
-  default = ["10.200.2.0/24", "10.200.3.0/24"]
-}
-
-azs = {
-  default = ["us-east-1a", "us-east-1b"]
-}
-
-region = {
-  default = "us-east-1"
-}
-
-default_tags = {
-  environment    = "prod"
-  role           = "production"
-  Name           = "Test For CNB prod"
+tags = {
   owner          = "eanselmi@edrans.com"
-  costCenter     = "SYSENG"
+  environment    = "stg"
+  costCenter     = "syseng"
   tagVersion     = 1
-  project        = "CNB"
-  expirationDate = "12/12/2022"
+  role           = "stg"
+  project        = "apolo"
+  expirationDate = "12/12/2023"
 }
+
+vpc = {
+  cidr          = "10.200.0.0/16"
+  dns_support   = "true"
+  dns_hostnames = "true"
+  classiclink   = "false"
+  tenancy       = "default"
+}
+
+public_subnets  = ["10.200.0.0/24", "10.200.1.0/24"]
+private_subnets = ["10.200.2.0/24", "10.200.3.0/24"]
+azs             = ["us-east-1a", "us-east-1b"]
+region          = "us-east-1"
